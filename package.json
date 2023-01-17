@@ -1,0 +1,26 @@
+{
+  "name": "itslearning-resources-ripper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "notes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/multi-progress": "^2.0.3",
+    "axios": "^0.27.2",
+    "colorette": "^2.0.19",
+    "dotenv": "^16.0.3",
+    "enquirer": "^2.3.6",
+    "multi-progress": "^4.0.0",
+    "puppeteer": "^14.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.40",
+    "ts-node": "^10.8.1",
+    "ts-node-dev": "^2.0.0"
+  }
+}

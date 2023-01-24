@@ -9,6 +9,7 @@ import { capitalize, updateLogLine } from './helpers';
 import { getDownloadableFiles } from './main';
 import { itemTypes, ItemWithPath } from './types';
 import { pptxDownloadHandler } from './download-handlers/pptx';
+import { noteDownloadHandler } from './download-handlers/note';
 const { Input, MultiSelect } = require('enquirer');
 require('dotenv').config();
 
@@ -113,6 +114,7 @@ async function downloadHandler(
       case 'pdf': await pdfDownloadHandler(file, browser, page); break;
       case 'word': await docxDownloadHandler(file, browser, page); break;
       case 'powerpoint': await pptxDownloadHandler(file, browser, page); break;
+      case 'note': await noteDownloadHandler(file, browser, page); break;
       default: throw new Error(`Unknown file type: ${file.type}`);
     }
 
@@ -121,6 +123,8 @@ async function downloadHandler(
       msg: 'Finished'
     });
   } catch (error) {
+    console.error(error);
+    
     bar.tick({
       status: '🟥',
       msg: "Error downloading"

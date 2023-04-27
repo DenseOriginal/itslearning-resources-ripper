@@ -106,7 +106,8 @@ const multi = new MultiProgress(process.stdout);
 const fileBlacklist = [
 	'modul 9 + 10 - David Edgertons og teknologibrug, hvorfor er der forskel på danskers og kenyaners brug af toilettet.pptx',
 	'Taksonomi - idehistorie.docx',
-	'Trusselsbrev til fabrikant, 1812 + 11-årig pige fortæller om sin arbejdsdag i en kulmine, 1842 - taget fra Verden Før 1914 - i dansk perspektiv.pdf'
+	'Trusselsbrev til fabrikant, 1812 + 11-årig pige fortæller om sin arbejdsdag i en kulmine, 1842 - taget fra Verden Før 1914 - i dansk perspektiv.pdf',
+	'Eksamensangst - sådan lærer du af dine fejl'
 ]
 
 async function downloadHandler(

@@ -119,7 +119,7 @@ export function capitalize(str: string) {
 }
 
 export function createFolder(path: string) {
-  const dir = dirname(path.replace(/[^C]:/g, ' ').replace(/é/g, 'e'));
+  const dir = dirname(sanitizePath(path));
 
   if (!existsSync(dir)) {
     mkdirSync(dir, { recursive: true });
@@ -129,5 +129,8 @@ export function createFolder(path: string) {
 }
 
 export function sanitizePath(path: string): string {
-  return path.replace(/[^C]:/g, ' ').replace(/é/g, 'e');
+  return path
+  	.replace(/[^C]:/g, ' ')
+	.replace(/é/g, 'e')
+	.replace(/"/g, '');
 }

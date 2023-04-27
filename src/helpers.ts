@@ -132,5 +132,11 @@ export function sanitizePath(path: string): string {
   return path
   	.replace(/[^C]:/g, ' ')
 	.replace(/é/g, 'e')
-	.replace(/"/g, '');
+	.replace(/"/g, '')
+	.replace(/Å/g, 'Aa')
+	.replace(/Ø/g, 'Oe')
+	.replace(/Æ/g, 'Ae')
+	.replace(/å/g, 'aa')
+	.replace(/ø/g, 'oe')
+	.replace(/æ/g, 'ae')
 }

@@ -140,4 +140,6 @@ export function sanitizePath(path: string): string {
 	.replace(/ø/g, 'oe')
 	.replace(/æ/g, 'ae')
 	.replace(/–/g, '-')
+	.replace(/‘/g, '')
+	.replace(/’/g, '')
 }
